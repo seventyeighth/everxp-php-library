@@ -1,6 +1,9 @@
 {
     "name": "1178-team/everxp",
     "type": "library",
+    "require": {
+        "php": ">=5.4"
+    },
     "license": "Ever XP",
     "autoload": {
         "psr-4": {
