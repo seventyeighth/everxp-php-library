@@ -1,14 +1,15 @@
 <?php
 
-namespace EverxpHeadings;
+namespace Everxp;
 
 class Headings
 {
 
-	private $domain = 'https://api.everxp.com';
 
 	public function xp_pattern($pattern_parameters = array())
 	{
+		$domain = 'https://api.everxp.com';
+
 		if (empty($pattern_parameters))
 		{
 			return json_encode('This api needs pattern parameters as an array.');
@@ -44,6 +45,9 @@ class Headings
 		
 	public function xp_quote($quote_parameters = array())
 	{
+
+		$domain = 'https://api.everxp.com';
+
 		if (empty($quote_parameters))
 		{
 			return json_encode('This api needs quote parameters as an array.');
@@ -79,6 +83,10 @@ class Headings
 
 	public function xp_time($time_parameters = array())
 	{
+
+		$domain = 'https://api.everxp.com';
+
+		
 		if (empty($time_parameters))
 		{
 			return json_encode('This api needs time parameters as an array.');
