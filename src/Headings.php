@@ -35,10 +35,12 @@ class Headings
 		$response_decoded = json_decode($response, true);
 		if (array_key_exists("heading",$response_decoded))
 		{
-			return $response['heading'];
+			return $response_decoded['heading'];
 		}
-
-		return $response;
+		else
+		{
+			return $response;
+		}
 
 	}
 		
@@ -74,10 +76,12 @@ class Headings
 		$response_decoded = json_decode($response, true);
 		if (array_key_exists("heading",$response_decoded))
 		{
-			return $response['heading'];
+			return $response_decoded['heading'];
 		}
-
-		return $response;
+		else
+		{
+			return $response;
+		}
 
 	}
 
@@ -86,7 +90,7 @@ class Headings
 
 		$domain = 'https://api.everxp.com';
 
-		
+
 		if (empty($time_parameters))
 		{
 			return json_encode('This api needs time parameters as an array.');
@@ -113,10 +117,12 @@ class Headings
 		$response_decoded = json_decode($response, true);
 		if (array_key_exists("heading",$response_decoded))
 		{
-			return $response['heading'];
+			return $response_decoded['heading'];
 		}
-
-		return $response;
+		else
+		{
+			return $response;
+		}
 	
 	}
 
