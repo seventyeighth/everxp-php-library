@@ -5,12 +5,12 @@ namespace EverxpHeadings;
 class Headings
 {
 
-	public function xp_pattern($pattern_parameters=array(), $domain=""){
+	private $domain = 'https://api.everxp.com'
+
+	public function xp_pattern($pattern_parameters = array())
+	{
 		if(empty($pattern_parameters)){
 			echo 'This api needs pattern as an array.';
-		}
-		else if($domain==""){
-			echo 'Api url is needed as a paramter';
 		}
 		else if(!isset($pattern_parameters['api_key'])){
 			echo 'Api Key is a required field, Please add the Api Key.';
@@ -47,25 +47,16 @@ class Headings
 			$response = curl_exec($ch);
 			//close curl resource, and free up system resources.
 			curl_close($ch);
-			$response = json_decode($response, true);
-			echo 'Request by: Pattern API</br>';
-			if (array_key_exists("heading",$response)){
-				echo $response['heading'];
-			}
-			else{
-				print_r($response);
-			}
-			echo '<br><br>';
+
+			return $response;
 		}
 	}
 		
 		
-	public function xp_quote($quote_parameters=array(), $domain=""){
+	public function xp_quote($quote_parameters = array())
+	{
 		if(empty($quote_parameters)){
 			echo 'This api needs pattern as an array.';
-		}
-		else if($domain==""){
-			echo 'Api url is needed as a paramter';
 		}
 		else if(!isset($quote_parameters['api_key'])){
 			echo 'Api Key is a required field, Please add the Api Key.';
@@ -103,24 +94,15 @@ class Headings
 			$response = curl_exec($ch);
 			//close curl resource, and free up system resources.
 			curl_close($ch);
-			$response = json_decode($response, true);
-			echo 'Request by: Quote API</br>';
-			if (array_key_exists("heading",$response)){
-				echo $response['heading'];
-			}
-			else{
-				print_r($response);
-			}
-			echo '<br><br>';
+
+			return $response;
 		}			
 	}
 
-	public function xp_time($time_parameters=array(), $domain=""){
+	public function xp_time($time_parameters = array())
+	{
 		if(empty($time_parameters)){
 			echo 'This api needs pattern as an array.';
-		}
-		else if($domain==""){
-			echo 'Api url is needed as a paramter';
 		}
 		else if(!isset($time_parameters['api_key'])){
 			echo 'Api Key is a required field, Please add the Api Key.';
@@ -162,16 +144,8 @@ class Headings
 			$response = curl_exec($ch);
 			//close curl resource, and free up system resources.
 			curl_close($ch);
-			$response = json_decode($response,true);
-			echo 'Request by: Time API</br>';
-			if (array_key_exists("heading",$response)){
-				echo $response['heading'];	
-			}
-			else{
-				
-				print_r($response);
-			}
-			echo '<br><br>';	
+
+			return $response;
 		}			
 	}
 
