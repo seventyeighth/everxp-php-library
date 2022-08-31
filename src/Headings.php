@@ -33,7 +33,7 @@ class Headings
 		curl_close($ch);
 
 		$response_decoded = json_decode($response, true);
-		if (array_key_exists("heading",$response))
+		if (array_key_exists("heading",$response_decoded))
 		{
 			return $response['heading'];
 		}
@@ -72,7 +72,7 @@ class Headings
 		curl_close($ch);
 
 		$response_decoded = json_decode($response, true);
-		if (array_key_exists("heading",$response))
+		if (array_key_exists("heading",$response_decoded))
 		{
 			return $response['heading'];
 		}
@@ -111,7 +111,7 @@ class Headings
 		curl_close($ch);
 
 		$response_decoded = json_decode($response, true);
-		if (array_key_exists("heading",$response))
+		if (array_key_exists("heading",$response_decoded))
 		{
 			return $response['heading'];
 		}
