@@ -5,7 +5,7 @@ namespace EverxpHeadings;
 class Headings
 {
 
-	private $domain = 'https://api.everxp.com'
+	private $domain = 'https://api.everxp.com';
 
 	public function xp_pattern($pattern_parameters = array())
 	{
