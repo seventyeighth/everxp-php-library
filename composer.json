@@ -4,7 +4,6 @@
     "require": {
         "php": ">=5.4"
     },
-    "license": "Ever XP",
     "autoload": {
         "psr-4": {
             "HeadingsEndpoints\\": "src/"
