@@ -1,0 +1,17 @@
+{
+    "name": "1178-team/everxp",
+    "type": "library",
+    "license": "Ever XP",
+    "autoload": {
+        "psr-4": {
+            "1178Team\\Everxp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "1178 Team"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
