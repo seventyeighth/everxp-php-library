@@ -5,7 +5,10 @@
     "autoload": {
         "psr-4": {
             "HeadingsEndpoints\\": "src/"
-        }
+        },
+        "files": [
+              "src/Headings.php"
+            ]
     },
     "authors": [
         {
