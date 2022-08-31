@@ -1,8 +1,17 @@
 {
     "name": "1178-team/everxp",
+    "description": "PHP library for the Ever XP API.",
+    "homepage": "https://github.com/1178-team/everxp-php-library",
+    "license": "Apache-2.0",
+    "keywords": [
+        "everxp",
+        "everxp-php"
+    ],
     "type": "library",
     "require": {
-        "php": ">=5.4"
+        "php": ">=5.4.0",
+        "ext-curl": "*",
+        "ext-json": "*"
     },
     "autoload": {
         "psr-4": {
