@@ -1,8 +1,8 @@
 <?php
 
-namespace team/Everxp;
+namespace HeadingsEndpoints;
 
-class Everxp()
+class Headings()
 {
 
 	public function xp_pattern($pattern_parameters=array(), $domain=""){
