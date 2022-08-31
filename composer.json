@@ -17,6 +17,6 @@
             "name": "1178 Team"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {}
 }
