@@ -1,8 +1,8 @@
 <?php
 
-namespace HeadingsEndpoints;
+namespace EverxpHeadings;
 
-class Headings()
+class Headings
 {
 
 	public function xp_pattern($pattern_parameters=array(), $domain=""){
