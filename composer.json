@@ -4,7 +4,7 @@
     "license": "Ever XP",
     "autoload": {
         "psr-4": {
-            "1178Team\\Everxp\\": "src/"
+            "Team\\Everxp\\": "src/"
         }
     },
     "authors": [

@@ -1,6 +1,6 @@
 <?php
 
-namespace everxp\main;
+namespace Team/Everxp;
 
 class Everxp()
 {
