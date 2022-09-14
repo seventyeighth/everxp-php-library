@@ -15,10 +15,10 @@
     },
     "autoload": {
         "psr-4": {
-            "EverxpHeadings\\": "src/"
+            "Everxp\\": "src/Everxp"
         },
         "files": [
-              "src/Headings.php"
+              "src/Everxp.php"
             ]
     },
     "authors": [

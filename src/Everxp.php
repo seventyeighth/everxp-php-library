@@ -2,7 +2,7 @@
 
 namespace Everxp;
 
-class Headings
+class Everxp
 {
 
 
