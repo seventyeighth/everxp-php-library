@@ -8,6 +8,8 @@ The EverXP PHP library helps developers to easily connect to Ever XP API, throug
 * Pull Patterns combinations
 * Pull Quotes combinations
 * Pull Date & Time combinations
+* Pull CTAs combinations
+* Pull Humanitarian combinations
 
 ## Installation
 
