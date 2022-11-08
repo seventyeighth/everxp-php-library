@@ -9,7 +9,7 @@ class Everxp
 
     public function __construct($config)
     {
-    	$config = array_merge($this->config, $config);
+    	$this->config = array_merge($this->config, $config);
         if(!isset($this->config['api_key']))
         {
             return json_encode('EverXP API Key is missing.');
