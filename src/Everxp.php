@@ -5,19 +5,32 @@ namespace Everxp;
 class Everxp
 {
 
+	protected $config = [];
 
-	public function xp_pattern($pattern_parameters = array())
+    public function __construct($config)
+    {
+
+        $this->config = array_merge($this->config, $config);
+
+        if(!isset($this->config['api_key']))
+        {
+            return json_encode('EverXP API Key is missing.');
+        }
+
+    }
+
+	public function xp_pattern($config = array())
 	{
 		$domain = 'https://api.everxp.com';
 
-		if (empty($pattern_parameters))
+		if (empty($config))
 		{
-			return json_encode('This api needs pattern parameters as an array.');
+			return json_encode('Pattern parameters are missing.');
 		}
 
 		$xp_patters_parameters_string = "$domain/heading/pattern?";
-		//Removes empty values from $pattern_parameters array
-		$remove_empty = array_filter($pattern_parameters, 'strlen');
+		//Removes empty values from $config array
+		$remove_empty = array_filter($config, 'strlen');
 		$xp_patters_parameters_string .=  http_build_query($remove_empty);
 		
 		//curl_init() Initialize a CURL session.
@@ -45,20 +58,20 @@ class Everxp
 	}
 		
 		
-	public function xp_quote($quote_parameters = array())
+	public function xp_quote($config = array())
 	{
 
 		$domain = 'https://api.everxp.com';
 
-		if (empty($quote_parameters))
+		if (empty($config))
 		{
-			return json_encode('This api needs quote parameters as an array.');
+			return json_encode('Quote parameters are missing.');
 		}
 
 		$xp_quote_parameters_string = "$domain/heading/quote?";
 		
-		//Removes empty values from $pattern_parameters array
-		$remove_empty = array_filter($quote_parameters, 'strlen');
+		//Removes empty values from $config array
+		$remove_empty = array_filter($config, 'strlen');
 		$xp_quote_parameters_string .=  http_build_query($remove_empty);
 		
 		//curl_init() Initialize a CURL session.
@@ -85,21 +98,21 @@ class Everxp
 
 	}
 
-	public function xp_time($time_parameters = array())
+	public function xp_time($config = array())
 	{
 
 		$domain = 'https://api.everxp.com';
 
 
-		if (empty($time_parameters))
+		if (empty($config))
 		{
-			return json_encode('This api needs time parameters as an array.');
+			return json_encode('Time parameters are missing..');
 		}
 
 		$xp_time_parameters_string = "$domain/heading/time?";
 		
-		//Removes empty values from $pattern_parameters array
-		$remove_empty = array_filter($time_parameters, 'strlen');
+		//Removes empty values from $config array
+		$remove_empty = array_filter($config, 'strlen');
 		$xp_time_parameters_string .=  http_build_query($remove_empty);
 		
 		//curl_init() Initialize a CURL session.
