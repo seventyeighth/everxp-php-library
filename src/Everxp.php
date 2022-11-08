@@ -19,7 +19,7 @@ class Everxp
 
     }
 
-	public function xp_pattern($config = array())
+	public function xp_pattern($config)
 	{
 		$domain = 'https://api.everxp.com';
 
@@ -58,7 +58,7 @@ class Everxp
 	}
 		
 		
-	public function xp_quote($config = array())
+	public function xp_quote($config)
 	{
 
 		$domain = 'https://api.everxp.com';
@@ -98,7 +98,7 @@ class Everxp
 
 	}
 
-	public function xp_time($config = array())
+	public function xp_time($config)
 	{
 
 		$domain = 'https://api.everxp.com';
