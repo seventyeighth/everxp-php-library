@@ -25,8 +25,14 @@ class Everxp
 		{
 			return json_encode('Pattern parameters are missing.');
 		}
-
+		var_dump($config);
+		var_dump("<br>");
+		var_dump($this->config);
+		var_dump("<br><br>");
 		$config = array_merge($this->config, $config);
+		var_dump($config);
+		var_dump("<br>");
+		var_dump($this->config);die;
 
 		$xp_patters_parameters_string = "$domain/heading/pattern?";
 		//Removes empty values from $config array
