@@ -25,10 +25,9 @@ require_once("your_path/Headings.php");
 ## Usage
 
 ``` php
-$everxp = new \EverxpHeadings\Headings();
+$everxp = new \EverxpHeadings\Headings(array("api_key" => "_YOUR_API_KEY_"));
 
     $heading = $this->everxp->xp_pattern([
-        'api_key' => '_YOUR_API_KEY_',
         'pattern' => 11,
         'lang' => 'en',
     ]);
