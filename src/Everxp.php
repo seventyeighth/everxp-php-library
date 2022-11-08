@@ -10,8 +10,6 @@ class Everxp
     public function __construct($config)
     {
 
-        $this->config = array_merge($this->config, $config);
-
         if(!isset($this->config['api_key']))
         {
             return json_encode('EverXP API Key is missing.');
@@ -28,8 +26,7 @@ class Everxp
 			return json_encode('Pattern parameters are missing.');
 		}
 
-		var_dump($config);
-		var_dump($this->config);die;
+		$config = array_merge($this->config, $config);
 
 		$xp_patters_parameters_string = "$domain/heading/pattern?";
 		//Removes empty values from $config array
@@ -71,6 +68,8 @@ class Everxp
 			return json_encode('Quote parameters are missing.');
 		}
 
+		$config = array_merge($this->config, $config);
+
 		$xp_quote_parameters_string = "$domain/heading/quote?";
 		
 		//Removes empty values from $config array
@@ -111,6 +110,8 @@ class Everxp
 		{
 			return json_encode('Time parameters are missing..');
 		}
+
+		$config = array_merge($this->config, $config);
 
 		$xp_time_parameters_string = "$domain/heading/time?";
 		
