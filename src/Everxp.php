@@ -47,7 +47,7 @@ class Everxp
 		curl_close($ch);
 
 		$response_decoded = json_decode($response, true);
-		if (array_key_exists("heading",$response_decoded))
+		if (isset($response_decoded['heading']) && $response_decoded['heading'] !== null)
 		{
 			return $response_decoded['heading'];
 		}
@@ -90,7 +90,7 @@ class Everxp
 		curl_close($ch);
 
 		$response_decoded = json_decode($response, true);
-		if (array_key_exists("heading",$response_decoded))
+		if (isset($response_decoded['heading']) && $response_decoded['heading'] !== null)
 		{
 			return $response_decoded['heading'];
 		}
@@ -133,7 +133,7 @@ class Everxp
 		curl_close($ch);
 
 		$response_decoded = json_decode($response, true);
-		if (array_key_exists("heading",$response_decoded))
+		if (isset($response_decoded['heading']) && $response_decoded['heading'] !== null)
 		{
 			return $response_decoded['heading'];
 		}
@@ -174,7 +174,7 @@ class Everxp
 		curl_close($ch);
 
 		$response_decoded = json_decode($response, true);
-		if (array_key_exists("heading",$response_decoded))
+		if (isset($response_decoded['heading']) && $response_decoded['heading'] !== null)
 		{
 			return $response_decoded['heading'];
 		}
@@ -215,7 +215,7 @@ class Everxp
 		curl_close($ch);
 
 		$response_decoded = json_decode($response, true);
-		if (array_key_exists("heading",$response_decoded))
+		if (isset($response_decoded['heading']) && $response_decoded['heading'] !== null)
 		{
 			return $response_decoded['heading'];
 		}
