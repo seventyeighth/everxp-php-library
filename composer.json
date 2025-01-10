@@ -1,30 +1,35 @@
 {
     "name": "everxp/php",
-    "description": "PHP library for the Ever XP API.",
+    "description": "PHP library for the EverXP API.",
     "homepage": "https://github.com/1178-team/everxp-php-library",
     "license": "Apache-2.0",
     "keywords": [
         "everxp",
-        "everxp-php"
+        "everxp-php",
+        "php-library",
+        "api"
     ],
     "type": "library",
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=7.2", // Updated PHP version for better compatibility and security
         "ext-curl": "*",
         "ext-json": "*"
     },
     "autoload": {
         "psr-4": {
-            "Everxp\\": "src/Everxp"
-        },
-        "files": [
-              "src/Everxp.php"
-            ]
+            "Everxp\\": "src/"
+        }
     },
     "authors": [
         {
-            "name": "1178 Team"
+            "name": "1178 Team",
+            "email": "amit@everxp.com" // Optional but recommended
         }
-    ],
-    "require": {}
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5" // Add for unit testing
+    },
+    "scripts": {
+        "test": "phpunit" // Add for running tests with Composer
+    }
 }
