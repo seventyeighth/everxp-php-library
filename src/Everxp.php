@@ -25,7 +25,9 @@ class Everxp
         }
 
         $url = "$domain/heading/$endpoint?";
-        $remove_empty = array_filter($config, 'strlen');
+        $remove_empty = array_filter($config, function ($value) {
+            return is_string($value) && strlen($value);
+        });
         $url .= http_build_query($remove_empty);
 
         $ch = curl_init();
@@ -54,7 +56,9 @@ class Everxp
 
         $url = "$domain/v2/request/";
 
-        $remove_empty = array_filter($config, 'strlen');
+        $remove_empty = array_filter($config, function ($value) {
+            return is_string($value) && strlen($value);
+        });
         $payload = json_encode($remove_empty);
 
         $headers = [
